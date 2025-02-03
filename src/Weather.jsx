@@ -4,9 +4,10 @@ import Video from "./assets/car.mp4";
 
 function Weather() {
   const api = {
-    key: "3252fed708c47312fd9cac9c3dc35a38",
+    key: process.env.REACT_APP_WEATHERAPIKEY,
     base: "https://api.openweathermap.org/data/2.5/",
   };
+  console.log(process.env.REACT_APP_WEATHERAPIKEY);
 
   const [weather, setWeather] = useState("");
   const [data, setData] = useState({});
